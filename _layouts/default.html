@@ -86,7 +86,7 @@ html, body {
       <ul>
         {% for item in site.data.pages.pages %}
         {% if page.url == item.url %}
-        <li><a href="{{ '/' | absolute_url }}{{ item.url }}"><font color="blue">{{ item.title }}</font></a></li>
+        <li><a href="{{ '/' | absolute_url }}{{ item.url }}"><font color="white">{{ item.title }}</font></a></li>
         {% else %}
         <li><a href="{{ '/' | absolute_url }}{{ item.url }}">{{ item.title }}</a></li>
         {% endif %}
