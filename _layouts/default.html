@@ -29,7 +29,7 @@ html, body {
   display: none;
 }
 #page-nav label {
-  color: #fff;
+  color: #666;
   background: #a02620;
   font-style: normal;
   font-size: 1.2em;
@@ -85,8 +85,11 @@ html, body {
       <!-- [MENU ITEMS] -->
       <ul>
         {% for item in site.data.pages.pages %}
-          <li><a href="{{ '/' | absolute_url }}{{ item.url }}">{{ item.title }}</a>
-        {% endfor %}
+        {% if page.url == item.url %}
+        <li><a href="{{ '/' | absolute_url }}{{ item.url }}"><font color="white">{{ item.title }}</font></a></li>
+        {% else %}
+        <li><a href="{{ '/' | absolute_url }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endif %}
       </ul>
     </nav>
     <section class="page-header">
