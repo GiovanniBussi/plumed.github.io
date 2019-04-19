@@ -77,6 +77,20 @@ html, body {
     </style>
   </head>
   <body>
+    <nav id="page-nav">
+      <!-- [THE HAMBURGER] -->
+      <label for="hamburger">&#9776;</label>
+      <input type="checkbox" id="hamburger"/>
+
+      <!-- [MENU ITEMS] -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tech.html">Tech</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+    </nav>
     <section class="page-header">
       <a href="https://github.com/plumed/plumed2"><img style="position:absolute; top:10px; right:100px; width:50px" src="{{ '/' | absolute_url }}/Octocat.png" title="Get development version"></a>
       <a href="https://github.com/plumed/plumed2/releases/download/v{{ site.data.releases.current[0] }}/plumed-{{ site.data.releases.current[0] }}.tgz"><img style="position:absolute; top:10px; right:40px; width:40px" src="{{ '/' | absolute_url }}/arrow.png" title="Get latest release"></a>
