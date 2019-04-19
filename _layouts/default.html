@@ -8,6 +8,73 @@
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <style>
+      /* [PAGE] */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+}
+
+/* [MENU] */
+#page-nav {
+  background: #000;
+}
+#page-nav label, #page-nav ul, #page-nav li {
+  display: inline-block;
+}
+
+/* [HAMBURGER - HIDDEN ON BIG SCREENS] */
+#page-nav label, #hamburger {
+  display: none;
+}
+#page-nav label {
+  color: #fff;
+  background: #a02620;
+  font-style: normal;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+/* [MENU ITEMS] */
+#page-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+}
+#page-nav ul li {
+  padding: 10px;
+  box-sizing: border-box;
+}
+#page-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* [ON SMALL SCREENS] */
+@media screen and (max-width: 768px){
+  /* [SHOW HAMBURGER] */
+  #page-nav label {
+    display: inline-block;
+  }
+
+  /* [BREAK DOWN MENU INTO VERTICAL] */
+  #page-nav ul li {
+    display: block;
+  }
+  #page-nav ul li {
+    border-top: 1px solid #333;
+  }
+
+  /* [SHOW/HIDE MENU ON CHECKBOX CLICK] */
+  #page-nav ul {
+    display: none;
+  }
+  #page-nav input:checked ~ ul {
+    display: block;
+  }
+}
+    </style>
   </head>
   <body>
     <section class="page-header">
